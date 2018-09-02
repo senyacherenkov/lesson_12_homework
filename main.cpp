@@ -5,14 +5,23 @@
 
 int main()
 {
-    Model* menuModel = new MenuModel();
-    Controller* menuController = new MenuController(menuModel);
+    MenuModel menuModel{};
+    DrawModel drawModel{};
+    MenuController menuController(menuModel);
+    DrawController drawController(drawModel);
 
-    ViewBase* menuView = new MenuView("menuView");
+    MenuView menuView {};
+    DrawView drawView {};
 
-    menuModel->connect([&](Model* m) {
+    menuModel.connect([&](Model* m) {
         menuView->printNameOfCurrentDocument(m);
     });
+
+    drawModel.connect([&](Model* m) {
+        drawView->printNameOfCurrentDocument(m);
+    });
+
+    menuController.createNewDocument("picture_1.jpg");
 
 
     return 0;

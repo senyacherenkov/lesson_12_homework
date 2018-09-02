@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(editor VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
+project(editor)
+#VERSION 0.0.$ENV{TRAVIS_BUILD_NUMBER})
 
 add_executable(editor_cli main.cpp model.h model.cpp controller.h view.h)
 

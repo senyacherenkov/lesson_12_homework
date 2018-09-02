@@ -2,6 +2,13 @@
 #include <functional>
 #include <list>
 #include <iostream>
+#include <map>
+
+enum class MenuModelState {
+    DOC_CREATED,
+    DOC_IMPORTED,
+    DOC_EXPORTED
+};
 
 class Model;
 using Listener = std::function<void(Model*)>;
@@ -11,32 +18,37 @@ public:
     virtual ~Model();
 
     void connect(Listener view) { m_listeners.emplace_back(view); }
-    virtual void printNameOfCurrentDocument() = 0;
-private:
+    virtual std::string printState() = 0;
+protected:
     void notify();
 private:
     std::list<Listener> m_listeners;
+protected:
+    std::string m_docName;
 };
 
 class MenuModel: public Model {
 public:
     MenuModel() = default;
 
-    void createDocument(std::string& docName) { std::cout << "You see a new document with name " << docName << std::endl; }
-    void importDocument(std::string& docName) { std::cout << "Document " << docName << " has been imported " << std::endl; }
-    std::string exportDocument() { std::cout << "Current document " << m_docName << " has been exported " << std::endl; }
+    void createDocument(std::string& docName);
+    void importDocument(std::string& docName);
+    std::string exportDocument();
 
-    void printNameOfCurrentDocument() { std::cout << m_docName << std::endl; }
+    virtual std::string printState();
 private:
-    std::string m_docName;
+    MenuModelState m_state;
 };
 
 class DrawModel: public MenuModel {
 public:
     DrawModel() = default;
 
-    void drawGliph(std::string gliphName) { std::cout << "You see a new gliph " << gliphName << std::endl; m_counter++; }
-    void deleteGliph(std::string gliphName) { std::cout << "You see a new gliph " << gliphName << "with number: " << m_counter << std::endl; m_counter++; }
+    void drawGliph(std::string gliphName);
+    void deleteGliph(std::string gliphName);
+
+    virtual std::string printState();
 private:
-    std::map<int, std::string> gliphStore;
+    std::map<std::string, int> m_gliphStore;
+    static int m_counter;
 };

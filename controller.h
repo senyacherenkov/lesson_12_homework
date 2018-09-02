@@ -1,32 +1,27 @@
 #pragma once
 #include "model.h"
 
-class Controller {
+class MenuController {
 public:
-    Controller(Model* model):
-        m_model(model)
+    MenuController(MenuModel model):
+       m_model(model)
     {}
+
+    void createNewDocument(std::string docName) { m_model.createDocument(docName); }
+    void importDocument(std::string docName) {m_model.importDocument(docName); }
+    std::string exportDocument() { return m_model.exportDocument(); }
 private:
-    Model* m_model;
+    MenuModel& m_model;
 };
 
-class MenuController: public Controller {
+class DrawController {
 public:
-    MenuController(Model* model):
-        Controller(model)
-    {}
-
-    void createNewDocument(std::string& docName) { m_model->}
-    void importDocument(std::string& docName);
-    void exportDocument();
-};
-
-class DrawController: public Controller {
-public:
-    DrawController(Model* model):
-        Controller(model)
+    DrawController(DrawModel& model):
+        m_model(model)
     {}
 
     void drawGliph(std::string& docName);
     void deleteGliph(std::string& docName);
+private:
+    DrawModel& m_model;
 };
