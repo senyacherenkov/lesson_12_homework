@@ -30,7 +30,7 @@ protected:
 class MenuModel: public Model {
 public:
     MenuModel() = default;
-
+    ~MenuModel() {}
     void createDocument(std::string& docName);
     void importDocument(std::string& docName);
     std::string exportDocument();
@@ -43,7 +43,7 @@ private:
 class DrawModel: public MenuModel {
 public:
     DrawModel() = default;
-
+    ~DrawModel() {}
     void drawGliph(std::string gliphName);
     void deleteGliph(std::string gliphName);
 

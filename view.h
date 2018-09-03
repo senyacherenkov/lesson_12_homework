@@ -3,17 +3,9 @@
 #include "model.h"
 
 
-class MenuView {
+class View {
 public:
-    MenuView() = default;
-    void printStateOfMainDocument(Model* model) { std::cout << "Main view: current document is " << m_name << std::endl; }
+    View() = default;
+    void printStateOfDocument(Model* model) { std::cout << model->printState() << std::endl; }
 };
 
-class DrawView : public ViewBase {
-public:
-    DrawView(std::string name):
-        ViewBase(name)
-    {}
-
-    virtual void printNameOfCurrentDocument(Model* model) { std::cout << "Draw view: current document is " << m_name << std::endl; }
-};

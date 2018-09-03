@@ -3,7 +3,7 @@
 
 class MenuController {
 public:
-    MenuController(MenuModel model):
+    MenuController(MenuModel& model):
        m_model(model)
     {}
 
@@ -20,8 +20,8 @@ public:
         m_model(model)
     {}
 
-    void drawGliph(std::string& docName);
-    void deleteGliph(std::string& docName);
+    void drawGliph(std::string docName) {m_model.drawGliph(docName);}
+    void deleteGliph(std::string docName) {m_model.deleteGliph(docName);}
 private:
     DrawModel& m_model;
 };
