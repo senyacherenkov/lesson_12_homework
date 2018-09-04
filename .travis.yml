@@ -15,15 +15,12 @@ env:
 # Install dependencies
 addons:
   apt:
-    sources:
-      - ubuntu-toolchain-r-test
     packages:
       - doxygen
       - doxygen-doc
       - doxygen-latex
       - doxygen-gui
       - graphviz
-      - g++-7
     
 language: cpp
 before_script:
@@ -38,7 +35,7 @@ before_install:
 install: 
   # C++17
   - sudo apt-get install -qq g++-6
-- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
+  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
 script:
 - cmake .
 - cmake --build .
@@ -53,4 +50,4 @@ deploy:
 after_success:
   - cd $TRAVIS_BUILD_DIR
   - chmod +x generateDocumentationScript.sh
-  - ./generateDocumentationScript.sh  
+  - ./generateDocumentationScript.sh
