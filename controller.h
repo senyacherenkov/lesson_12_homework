@@ -1,5 +1,6 @@
 #pragma once
 #include "model.h"
+#include "gliph.h"
 
 class MenuController {
 public:
@@ -20,8 +21,8 @@ public:
         m_model(model)
     {}
 
-    void drawGliph(std::string docName) {m_model.drawGliph(docName);}
-    void deleteGliph(std::string docName) {m_model.deleteGliph(docName);}
+    void drawGliph(Gliph* gliph) {m_model.drawGliph(gliph);}
+    void deleteGliph(Gliph* gliph) {m_model.deleteGliph(gliph);}
 private:
     DrawModel& m_model;
 };

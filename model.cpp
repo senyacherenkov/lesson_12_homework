@@ -11,22 +11,22 @@ void Model::notify()
         view(this);
 }
 
-void DrawModel::drawGliph(std::string gliphName)
+void DrawModel::drawGliph(Gliph* gliph)
 {
     m_counter++;
-    std::cout << "New gliph " << gliphName << " with number " << m_counter << " created" << std::endl;
+    std::cout << "New gliph " << gliph->getDescription() << " with number " << m_counter << " created" << std::endl;
 
-    m_gliphStore.emplace(gliphName, m_counter);
+    m_gliphStore.emplace(gliph, m_counter);
     notify();
 }
 
-void DrawModel::deleteGliph(std::string gliphName)
+void DrawModel::deleteGliph(Gliph* gliph)
 {
     m_counter--;
-    auto result = m_gliphStore.find(gliphName);
+    auto result = m_gliphStore.find(gliph);
     if(result == m_gliphStore.end())
         return;    
-    std::cout << "Gliph " << gliphName << " with number " << result->second << " deleted" << std::endl;
+    std::cout << "Gliph " << gliph->getDescription() << " with number " << result->second << " deleted" << std::endl;
     m_gliphStore.erase(result);
     notify();
 }
@@ -40,7 +40,7 @@ std::string DrawModel::printState()
     for(const auto& pair: m_gliphStore)
     {
         strRepresentation.append("gliph name: ");
-        strRepresentation.append(pair.first);
+        strRepresentation.append(pair.first->getDescription());
         strRepresentation.append(", number: ");
         strRepresentation.append(std::to_string(pair.second));
         strRepresentation.append("\n");

@@ -3,6 +3,7 @@
 #include <list>
 #include <iostream>
 #include <map>
+#include "gliph.h"
 
 enum class MenuModelState {
     DOC_CREATED,
@@ -44,11 +45,11 @@ class DrawModel: public MenuModel {
 public:
     DrawModel() = default;
     ~DrawModel() {}
-    void drawGliph(std::string gliphName);
-    void deleteGliph(std::string gliphName);
+    void drawGliph(Gliph* gliphName);
+    void deleteGliph(Gliph* gliphName);
 
     virtual std::string printState();
 private:
-    std::map<std::string, int> m_gliphStore;
+    std::map<Gliph*, int> m_gliphStore;
     static int m_counter;
 };

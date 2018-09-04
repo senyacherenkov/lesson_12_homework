@@ -2,6 +2,12 @@
 #include "controller.h"
 #include "model.h"
 #include "view.h"
+#include "gliph.h"
+
+//1. Adding new gliphs is just creating new classes inheritable from Gliph
+//2. Database interconnection is a new functions in MenuModel
+//3. Modification of gliphs needs adding an access to their properties. Gliphstore in DrawModel allows to find elements and call appropriates methods for changing their properties
+//4. Gliphstore in DrawModel allows to iterate through gliphs and work with them (replace, modification, etc)
 
 int main()
 {
@@ -25,11 +31,9 @@ int main()
     menuController.exportDocument();
     menuController.importDocument("other_picture.jpg");
 
-    drawController.drawGliph("rectangular");
-    drawController.drawGliph("triangle");
-    drawController.drawGliph("line");
-
-    drawController.deleteGliph("triangle");
+    SimpleGliph* gliph = new SimpleGliph("justgliph");
+    drawController.drawGliph(gliph);
+    drawController.deleteGliph(gliph);
 
     return 0;
 }

@@ -1,18 +1,19 @@
 #pragma once
-
-enum class GliphType {
-    DOT,
-    ROUND,
-    RECTANGULAR,
-    TRIANGLE,
-    ELLIPSE
-};
+#include <string>
 
 class Gliph {
 public:
-    Gliph(GliphType type):
-        m_type(type)
+    Gliph(std::string description):
+        m_description(description)
     {}
+    std::string getDescription() { return m_description;}
 private:
-    GliphType m_type;
+    std::string m_description;
+};
+
+class SimpleGliph: public Gliph {
+public:
+    SimpleGliph(std::string description):
+        Gliph(description)
+    {}
 };
