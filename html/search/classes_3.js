@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['simplegliph',['SimpleGliph',['../classSimpleGliph.html',1,'']]]
+  ['simpleglyph',['SimpleGlyph',['../classSimpleGlyph.html',1,'']]]
 ];

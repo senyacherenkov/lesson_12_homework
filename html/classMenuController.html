@@ -101,8 +101,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a363b3b1f1ec549bad12d9c21e735199e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f1afff77b046474eb1d2248a7c1e53e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuController.html#a4f1afff77b046474eb1d2248a7c1e53e">importDocument</a> (std::string docName)</td></tr>
 <tr class="separator:a4f1afff77b046474eb1d2248a7c1e53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae117eda1c1bc63bc75cd5475d570e561"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuController.html#ae117eda1c1bc63bc75cd5475d570e561">exportDocument</a> ()</td></tr>
-<tr class="separator:ae117eda1c1bc63bc75cd5475d570e561"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4835029567eda8a9ffafec8a7e3f601f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuController.html#a4835029567eda8a9ffafec8a7e3f601f">exportDocument</a> (std::string asFile)</td></tr>
+<tr class="separator:a4835029567eda8a9ffafec8a7e3f601f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4453ae49a57f13d8d6450c712fefd66f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGlyph.html">Glyph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuController.html#a4453ae49a57f13d8d6450c712fefd66f">createGlyph</a> (<a class="el" href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6e">GlyphType</a> glyph, std::string description)</td></tr>
+<tr class="separator:a4453ae49a57f13d8d6450c712fefd66f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a51fa85e8ac5858efc9129002d8104544"></a>
@@ -130,6 +132,40 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4453ae49a57f13d8d6450c712fefd66f"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classGlyph.html">Glyph</a>* MenuController::createGlyph </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6e">GlyphType</a>&#160;</td>
+          <td class="paramname"><em>glyph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a363b3b1f1ec549bad12d9c21e735199e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -154,7 +190,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="ae117eda1c1bc63bc75cd5475d570e561"></a>
+<a class="anchor" id="a4835029567eda8a9ffafec8a7e3f601f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -162,9 +198,10 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string MenuController::exportDocument </td>
+          <td class="memname">void MenuController::exportDocument </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>asFile</em></td><td>)</td>
           <td></td>
         </tr>
       </table>

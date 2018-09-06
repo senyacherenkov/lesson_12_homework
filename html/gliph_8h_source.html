@@ -88,27 +88,35 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="gliph_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="classGliph.html">    4</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGliph.html">Gliph</a> {</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classGliph.html#a9947cf6ae446f6b764cd4a0fea1c7342">    6</a></span>&#160;    <a class="code" href="classGliph.html#a9947cf6ae446f6b764cd4a0fea1c7342">Gliph</a>(std::string description):</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;        m_description(description)</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {}</div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classGliph.html#aa7d888c152939b8a8411a2380f7a08ea">    9</a></span>&#160;    std::string <a class="code" href="classGliph.html#aa7d888c152939b8a8411a2380f7a08ea">getDescription</a>() { <span class="keywordflow">return</span> m_description;}</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    std::string m_description;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classSimpleGliph.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSimpleGliph.html">SimpleGliph</a>: <span class="keyword">public</span> <a class="code" href="classGliph.html">Gliph</a> {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classSimpleGliph.html#a7aea71206f74cb6c33ae12b27308f0bb">   16</a></span>&#160;    <a class="code" href="classSimpleGliph.html#a7aea71206f74cb6c33ae12b27308f0bb">SimpleGliph</a>(std::string description):</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <a class="code" href="classGliph.html">Gliph</a>(description)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {}</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="ttc" id="classSimpleGliph_html_a7aea71206f74cb6c33ae12b27308f0bb"><div class="ttname"><a href="classSimpleGliph.html#a7aea71206f74cb6c33ae12b27308f0bb">SimpleGliph::SimpleGliph</a></div><div class="ttdeci">SimpleGliph(std::string description)</div><div class="ttdef"><b>Definition:</b> gliph.h:16</div></div>
-<div class="ttc" id="classSimpleGliph_html"><div class="ttname"><a href="classSimpleGliph.html">SimpleGliph</a></div><div class="ttdef"><b>Definition:</b> gliph.h:14</div></div>
-<div class="ttc" id="classGliph_html"><div class="ttname"><a href="classGliph.html">Gliph</a></div><div class="ttdef"><b>Definition:</b> gliph.h:4</div></div>
-<div class="ttc" id="classGliph_html_a9947cf6ae446f6b764cd4a0fea1c7342"><div class="ttname"><a href="classGliph.html#a9947cf6ae446f6b764cd4a0fea1c7342">Gliph::Gliph</a></div><div class="ttdeci">Gliph(std::string description)</div><div class="ttdef"><b>Definition:</b> gliph.h:6</div></div>
-<div class="ttc" id="classGliph_html_aa7d888c152939b8a8411a2380f7a08ea"><div class="ttname"><a href="classGliph.html#aa7d888c152939b8a8411a2380f7a08ea">Gliph::getDescription</a></div><div class="ttdeci">std::string getDescription()</div><div class="ttdef"><b>Definition:</b> gliph.h:9</div></div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6e">    4</a></span>&#160;<span class="keyword">enum class</span> <a class="code" href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6e">GlyphType</a> {</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;    <a class="code" href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6ea9ae76c089db1975bb55eaf939896ad16">SIMPLE_GLYPH</a>,</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <a class="code" href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6ea7a2b1b3f2e0547d56de9996cd42130f4">OTHER_GLYPH</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;};</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classGlyph.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classGlyph.html">Glyph</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classGlyph.html#ad9bd394041828e7ea6599e4cc0f9f09e">   11</a></span>&#160;    <a class="code" href="classGlyph.html#ad9bd394041828e7ea6599e4cc0f9f09e">Glyph</a>(std::string description):</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        m_description(description)</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {}</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classGlyph.html#a486c653c91f1b1a194544f6280d0b654">   14</a></span>&#160;    std::string <a class="code" href="classGlyph.html#a486c653c91f1b1a194544f6280d0b654">getDescription</a>() { <span class="keywordflow">return</span> m_description;}</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    std::string m_description;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;};</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classSimpleGlyph.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSimpleGlyph.html">SimpleGlyph</a>: <span class="keyword">public</span> <a class="code" href="classGlyph.html">Glyph</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classSimpleGlyph.html#af74a93771a158ebf07a85b73d5c899da">   21</a></span>&#160;    <a class="code" href="classSimpleGlyph.html#af74a93771a158ebf07a85b73d5c899da">SimpleGlyph</a>(std::string description):</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <a class="code" href="classGlyph.html">Glyph</a>(description)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="ttc" id="classSimpleGlyph_html"><div class="ttname"><a href="classSimpleGlyph.html">SimpleGlyph</a></div><div class="ttdef"><b>Definition:</b> gliph.h:19</div></div>
+<div class="ttc" id="gliph_8h_html_a84dea1dd1afdc2f1990fe2b14d971b6ea7a2b1b3f2e0547d56de9996cd42130f4"><div class="ttname"><a href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6ea7a2b1b3f2e0547d56de9996cd42130f4">GlyphType::OTHER_GLYPH</a></div></div>
+<div class="ttc" id="classGlyph_html_a486c653c91f1b1a194544f6280d0b654"><div class="ttname"><a href="classGlyph.html#a486c653c91f1b1a194544f6280d0b654">Glyph::getDescription</a></div><div class="ttdeci">std::string getDescription()</div><div class="ttdef"><b>Definition:</b> gliph.h:14</div></div>
+<div class="ttc" id="classGlyph_html_ad9bd394041828e7ea6599e4cc0f9f09e"><div class="ttname"><a href="classGlyph.html#ad9bd394041828e7ea6599e4cc0f9f09e">Glyph::Glyph</a></div><div class="ttdeci">Glyph(std::string description)</div><div class="ttdef"><b>Definition:</b> gliph.h:11</div></div>
+<div class="ttc" id="classGlyph_html"><div class="ttname"><a href="classGlyph.html">Glyph</a></div><div class="ttdef"><b>Definition:</b> gliph.h:9</div></div>
+<div class="ttc" id="gliph_8h_html_a84dea1dd1afdc2f1990fe2b14d971b6e"><div class="ttname"><a href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6e">GlyphType</a></div><div class="ttdeci">GlyphType</div><div class="ttdef"><b>Definition:</b> gliph.h:4</div></div>
+<div class="ttc" id="classSimpleGlyph_html_af74a93771a158ebf07a85b73d5c899da"><div class="ttname"><a href="classSimpleGlyph.html#af74a93771a158ebf07a85b73d5c899da">SimpleGlyph::SimpleGlyph</a></div><div class="ttdeci">SimpleGlyph(std::string description)</div><div class="ttdef"><b>Definition:</b> gliph.h:21</div></div>
+<div class="ttc" id="gliph_8h_html_a84dea1dd1afdc2f1990fe2b14d971b6ea9ae76c089db1975bb55eaf939896ad16"><div class="ttname"><a href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6ea9ae76c089db1975bb55eaf939896ad16">GlyphType::SIMPLE_GLYPH</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

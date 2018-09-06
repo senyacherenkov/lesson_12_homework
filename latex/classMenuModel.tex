@@ -36,7 +36,9 @@ void \hyperlink{classMenuModel_ad9b8d1e30f024c6a2283d1c91822bdd2}{create\-Docume
 \item 
 void \hyperlink{classMenuModel_a95f08e56638248ef87aecd4d562ba44b}{import\-Document} (std\-::string \&doc\-Name)
 \item 
-std\-::string \hyperlink{classMenuModel_a4718233371f52961ce2ea58469b0af1f}{export\-Document} ()
+void \hyperlink{classMenuModel_a3533d1ef3d28bb399e9e276b9aa81007}{export\-Document} (std\-::string \&doc\-Name)
+\item 
+\hyperlink{classGlyph}{Glyph} $\ast$ \hyperlink{classMenuModel_a73a5b58296b95f8ee55fc6581f5a3002}{create\-Glyph} (\hyperlink{gliph_8h_a84dea1dd1afdc2f1990fe2b14d971b6e}{Glyph\-Type} glyph, std\-::string description)
 \item 
 virtual std\-::string \hyperlink{classMenuModel_ab49130e41f188e5c632c4681961d9415}{print\-State} ()
 \end{DoxyCompactItemize}
@@ -68,13 +70,21 @@ virtual std\-::string \hyperlink{classMenuModel_ab49130e41f188e5c632c4681961d941
 \item[{std\-::string \&}]{doc\-Name}
 \end{DoxyParamCaption}
 )}}\label{classMenuModel_ad9b8d1e30f024c6a2283d1c91822bdd2}
-\hypertarget{classMenuModel_a4718233371f52961ce2ea58469b0af1f}{\index{Menu\-Model@{Menu\-Model}!export\-Document@{export\-Document}}
-\index{export\-Document@{export\-Document}!MenuModel@{Menu\-Model}}
-\subsubsection[{export\-Document}]{\setlength{\rightskip}{0pt plus 5cm}std\-::string Menu\-Model\-::export\-Document (
+\hypertarget{classMenuModel_a73a5b58296b95f8ee55fc6581f5a3002}{\index{Menu\-Model@{Menu\-Model}!create\-Glyph@{create\-Glyph}}
+\index{create\-Glyph@{create\-Glyph}!MenuModel@{Menu\-Model}}
+\subsubsection[{create\-Glyph}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Glyph} $\ast$ Menu\-Model\-::create\-Glyph (
 \begin{DoxyParamCaption}
-{}
+\item[{{\bf Glyph\-Type}}]{glyph, }
+\item[{std\-::string}]{description}
 \end{DoxyParamCaption}
-)}}\label{classMenuModel_a4718233371f52961ce2ea58469b0af1f}
+)}}\label{classMenuModel_a73a5b58296b95f8ee55fc6581f5a3002}
+\hypertarget{classMenuModel_a3533d1ef3d28bb399e9e276b9aa81007}{\index{Menu\-Model@{Menu\-Model}!export\-Document@{export\-Document}}
+\index{export\-Document@{export\-Document}!MenuModel@{Menu\-Model}}
+\subsubsection[{export\-Document}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Model\-::export\-Document (
+\begin{DoxyParamCaption}
+\item[{std\-::string \&}]{doc\-Name}
+\end{DoxyParamCaption}
+)}}\label{classMenuModel_a3533d1ef3d28bb399e9e276b9aa81007}
 \hypertarget{classMenuModel_a95f08e56638248ef87aecd4d562ba44b}{\index{Menu\-Model@{Menu\-Model}!import\-Document@{import\-Document}}
 \index{import\-Document@{import\-Document}!MenuModel@{Menu\-Model}}
 \subsubsection[{import\-Document}]{\setlength{\rightskip}{0pt plus 5cm}void Menu\-Model\-::import\-Document (
@@ -92,10 +102,6 @@ virtual std\-::string \hyperlink{classMenuModel_ab49130e41f188e5c632c4681961d941
 
 
 Implements \hyperlink{classModel_a853995c3960bc17b4df783d76ca5dfeb}{Model}.
-
-
-
-Reimplemented in \hyperlink{classDrawModel_a64d70716532d50216910f4c37b75da32}{Draw\-Model}.
 
 
 

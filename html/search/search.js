@@ -7,14 +7,14 @@
 
 var indexSectionsWithContent =
 {
-  0: "cdegilmnprsv~",
+  0: "cdegilmnoprsv~",
   1: "dgmsv",
   2: "cgmrv",
   3: "cdegimnpsv~",
   4: "m",
   5: "l",
-  6: "m",
-  7: "d",
+  6: "gm",
+  7: "dos",
   8: "l"
 };
 

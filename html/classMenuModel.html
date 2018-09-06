@@ -97,7 +97,7 @@ Inheritance diagram for MenuModel:</div>
 <div class="dyncontent">
 <div class="center"><img src="classMenuModel__inherit__graph.png" border="0" usemap="#MenuModel_inherit__map" alt="Inheritance graph"/></div>
 <map name="MenuModel_inherit__map" id="MenuModel_inherit__map">
-<area shape="rect" id="node3" href="classDrawModel.html" title="DrawModel" alt="" coords="5,155,93,181"/><area shape="rect" id="node2" href="classModel.html" title="Model" alt="" coords="21,5,77,32"/></map>
+<area shape="rect" id="node2" href="classModel.html" title="Model" alt="" coords="21,5,77,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for MenuModel:</div>
@@ -117,8 +117,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad9b8d1e30f024c6a2283d1c91822bdd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a95f08e56638248ef87aecd4d562ba44b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuModel.html#a95f08e56638248ef87aecd4d562ba44b">importDocument</a> (std::string &amp;docName)</td></tr>
 <tr class="separator:a95f08e56638248ef87aecd4d562ba44b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4718233371f52961ce2ea58469b0af1f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuModel.html#a4718233371f52961ce2ea58469b0af1f">exportDocument</a> ()</td></tr>
-<tr class="separator:a4718233371f52961ce2ea58469b0af1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3533d1ef3d28bb399e9e276b9aa81007"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuModel.html#a3533d1ef3d28bb399e9e276b9aa81007">exportDocument</a> (std::string &amp;docName)</td></tr>
+<tr class="separator:a3533d1ef3d28bb399e9e276b9aa81007"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73a5b58296b95f8ee55fc6581f5a3002"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGlyph.html">Glyph</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuModel.html#a73a5b58296b95f8ee55fc6581f5a3002">createGlyph</a> (<a class="el" href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6e">GlyphType</a> glyph, std::string description)</td></tr>
+<tr class="separator:a73a5b58296b95f8ee55fc6581f5a3002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab49130e41f188e5c632c4681961d9415"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMenuModel.html#ab49130e41f188e5c632c4681961d9415">printState</a> ()</td></tr>
 <tr class="separator:ab49130e41f188e5c632c4681961d9415"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classModel.html">Model</a></td></tr>
@@ -200,14 +202,41 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a4718233371f52961ce2ea58469b0af1f"></a>
+<a class="anchor" id="a73a5b58296b95f8ee55fc6581f5a3002"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">std::string MenuModel::exportDocument </td>
+          <td class="memname"><a class="el" href="classGlyph.html">Glyph</a> * MenuModel::createGlyph </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6e">GlyphType</a>&#160;</td>
+          <td class="paramname"><em>glyph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>description</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a3533d1ef3d28bb399e9e276b9aa81007"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MenuModel::exportDocument </td>
+          <td>(</td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>docName</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -253,8 +282,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classModel.html#a853995c3960bc17b4df783d76ca5dfeb">Model</a>.</p>
-
-<p>Reimplemented in <a class="el" href="classDrawModel.html#a64d70716532d50216910f4c37b75da32">DrawModel</a>.</p>
 
 </div>
 </div>

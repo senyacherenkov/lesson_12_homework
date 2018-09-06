@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['view',['View',['../classView.html',1,'View'],['../classView.html#a9661c7b63a0988067c48fe7e56171bcd',1,'View::View()']]],
-  ['view_2eh',['view.h',['../view_8h.html',1,'']]]
+  ['simple_5fglyph',['SIMPLE_GLYPH',['../gliph_8h.html#a84dea1dd1afdc2f1990fe2b14d971b6ea9ae76c089db1975bb55eaf939896ad16',1,'gliph.h']]],
+  ['simpleglyph',['SimpleGlyph',['../classSimpleGlyph.html',1,'SimpleGlyph'],['../classSimpleGlyph.html#af74a93771a158ebf07a85b73d5c899da',1,'SimpleGlyph::SimpleGlyph()']]]
 ];

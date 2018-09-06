@@ -97,10 +97,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5d204b8281b789433f8e708a2335fb77"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawController.html#a5d204b8281b789433f8e708a2335fb77">DrawController</a> (<a class="el" href="classDrawModel.html">DrawModel</a> &amp;model)</td></tr>
 <tr class="separator:a5d204b8281b789433f8e708a2335fb77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a04e3a8f3ae763f720df925093244e2ee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawController.html#a04e3a8f3ae763f720df925093244e2ee">drawGliph</a> (<a class="el" href="classGliph.html">Gliph</a> *gliph)</td></tr>
-<tr class="separator:a04e3a8f3ae763f720df925093244e2ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56bf8880a546ece822bd4cae023cfe11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawController.html#a56bf8880a546ece822bd4cae023cfe11">deleteGliph</a> (<a class="el" href="classGliph.html">Gliph</a> *gliph)</td></tr>
-<tr class="separator:a56bf8880a546ece822bd4cae023cfe11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4a9587256d4638922823188f12886a65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawController.html#a4a9587256d4638922823188f12886a65">drawGlyph</a> (<a class="el" href="classGlyph.html">Glyph</a> *gliph, int x, int y)</td></tr>
+<tr class="separator:a4a9587256d4638922823188f12886a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab34a935c3f43aeb5b798d0bab4052713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDrawController.html#ab34a935c3f43aeb5b798d0bab4052713">deleteGlyph</a> (<a class="el" href="classGlyph.html">Glyph</a> *gliph)</td></tr>
+<tr class="separator:ab34a935c3f43aeb5b798d0bab4052713"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="a5d204b8281b789433f8e708a2335fb77"></a>
@@ -128,7 +128,7 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a56bf8880a546ece822bd4cae023cfe11"></a>
+<a class="anchor" id="ab34a935c3f43aeb5b798d0bab4052713"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -136,9 +136,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void DrawController::deleteGliph </td>
+          <td class="memname">void DrawController::deleteGlyph </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classGliph.html">Gliph</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="classGlyph.html">Glyph</a> *&#160;</td>
           <td class="paramname"><em>gliph</em></td><td>)</td>
           <td></td>
         </tr>
@@ -152,7 +152,7 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a04e3a8f3ae763f720df925093244e2ee"></a>
+<a class="anchor" id="a4a9587256d4638922823188f12886a65"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -160,11 +160,27 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void DrawController::drawGliph </td>
+          <td class="memname">void DrawController::drawGlyph </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classGliph.html">Gliph</a> *&#160;</td>
-          <td class="paramname"><em>gliph</em></td><td>)</td>
+          <td class="paramtype"><a class="el" href="classGlyph.html">Glyph</a> *&#160;</td>
+          <td class="paramname"><em>gliph</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>

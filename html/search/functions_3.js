@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['getdescription',['getDescription',['../classGliph.html#aa7d888c152939b8a8411a2380f7a08ea',1,'Gliph']]],
-  ['gliph',['Gliph',['../classGliph.html#a9947cf6ae446f6b764cd4a0fea1c7342',1,'Gliph']]]
+  ['getdescription',['getDescription',['../classGlyph.html#a486c653c91f1b1a194544f6280d0b654',1,'Glyph']]],
+  ['glyph',['Glyph',['../classGlyph.html#ad9bd394041828e7ea6599e4cc0f9f09e',1,'Glyph']]]
 ];
