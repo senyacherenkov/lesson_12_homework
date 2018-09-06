@@ -10,7 +10,9 @@ public:
 
     void createNewDocument(std::string docName) { m_model.createDocument(docName); }
     void importDocument(std::string docName) {m_model.importDocument(docName); }
-    std::string exportDocument() { return m_model.exportDocument(); }
+    void exportDocument(std::string asFile) { m_model.exportDocument(asFile); }
+
+    Glyph* createGlyph(GlyphType glyph, std::string description) { return m_model.createGlyph(glyph, description); }
 private:
     MenuModel& m_model;
 };
@@ -21,8 +23,8 @@ public:
         m_model(model)
     {}
 
-    void drawGliph(Gliph* gliph) {m_model.drawGliph(gliph);}
-    void deleteGliph(Gliph* gliph) {m_model.deleteGliph(gliph);}
+    void drawGlyph(Glyph* gliph, int x, int y) {m_model.drawGliph(gliph, x, y);}
+    void deleteGlyph(Glyph* gliph) {m_model.deleteGliph(gliph);}
 private:
     DrawModel& m_model;
 };

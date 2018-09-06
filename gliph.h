@@ -1,9 +1,14 @@
 #pragma once
 #include <string>
 
-class Gliph {
+enum class GlyphType {
+    SIMPLE_GLYPH,
+    OTHER_GLYPH
+};
+
+class Glyph {
 public:
-    Gliph(std::string description):
+    Glyph(std::string description):
         m_description(description)
     {}
     std::string getDescription() { return m_description;}
@@ -11,9 +16,9 @@ private:
     std::string m_description;
 };
 
-class SimpleGliph: public Gliph {
+class SimpleGlyph: public Glyph {
 public:
-    SimpleGliph(std::string description):
-        Gliph(description)
+    SimpleGlyph(std::string description):
+        Glyph(description)
     {}
 };

@@ -11,22 +11,25 @@ void Model::notify()
         view(this);
 }
 
-void DrawModel::drawGliph(Gliph* gliph)
+void DrawModel::drawGliph(Glyph* gliph, int x, int y)
 {
     m_counter++;
-    std::cout << "New gliph " << gliph->getDescription() << " with number " << m_counter << " created" << std::endl;
+    std::cout << "New glyph " << gliph->getDescription() << " with number " << m_counter
+              << " and coordinates: " << x << ", " << y << " created" << std::endl;
 
-    m_gliphStore.emplace(gliph, m_counter);
+    InternalData data = { data.x = x, data.y = y, data.number = m_counter };
+    m_gliphStore.emplace(gliph, data);
     notify();
 }
 
-void DrawModel::deleteGliph(Gliph* gliph)
+void DrawModel::deleteGliph(Glyph* gliph)
 {
     m_counter--;
     auto result = m_gliphStore.find(gliph);
     if(result == m_gliphStore.end())
         return;    
-    std::cout << "Gliph " << gliph->getDescription() << " with number " << result->second << " deleted" << std::endl;
+    std::cout << "Glyph " << gliph->getDescription() << " with number " << result->second.number
+              << " and coordinates: " << result->second.x << ", " << result->second.y << " deleted" << std::endl;
     m_gliphStore.erase(result);
     notify();
 }
@@ -39,10 +42,14 @@ std::string DrawModel::printState()
     strRepresentation.append("\n");
     for(const auto& pair: m_gliphStore)
     {
-        strRepresentation.append("gliph name: ");
+        strRepresentation.append("glyph name: ");
         strRepresentation.append(pair.first->getDescription());
         strRepresentation.append(", number: ");
-        strRepresentation.append(std::to_string(pair.second));
+        strRepresentation.append(std::to_string(pair.second.number));
+        strRepresentation.append(" and coordinates: ");
+        strRepresentation.append(std::to_string(pair.second.x));
+        strRepresentation.append(", ");
+        strRepresentation.append(std::to_string(pair.second.y));
         strRepresentation.append("\n");
     }
 
@@ -65,12 +72,22 @@ void MenuModel::importDocument(std::string &docName)
     notify();
 }
 
-std::string MenuModel::exportDocument()
+void MenuModel::exportDocument(std::string& asFile)
+{    
+    std::cout << "Manipulation for exporting project as document " << asFile << std::endl;
+    m_state = MenuModelState::DOC_EXPORTED;
+    notify();
+}
+
+Glyph *MenuModel::createGlyph(GlyphType glyph, std::string description)
 {
-     std::cout << "Manipulation for exporting current document " << m_docName << std::endl;
-     m_state = MenuModelState::DOC_EXPORTED;
-     notify();
-     return m_docName;
+    std::cout << "Choosing glyph type from menu collection" << std::endl;
+    switch(static_cast<int>(glyph)){
+        case static_cast<int>(GlyphType::SIMPLE_GLYPH):
+            return new SimpleGlyph(description);
+        default:
+            return nullptr;
+    }
 }
 
 std::string MenuModel::printState()

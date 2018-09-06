@@ -28,12 +28,13 @@ int main()
     });
 
     menuController.createNewDocument("picture.jpg");
-    menuController.exportDocument();
+    menuController.exportDocument("awesome_drawing.pdf");
     menuController.importDocument("other_picture.jpg");
 
-    SimpleGliph* gliph = new SimpleGliph("justgliph");
-    drawController.drawGliph(gliph);
-    drawController.deleteGliph(gliph);
+    auto glyph = menuController.createGlyph(GlyphType::SIMPLE_GLYPH, "simple glyph");
+
+    drawController.drawGlyph(glyph, 0, 0);
+    drawController.deleteGlyph(glyph);
 
     return 0;
 }

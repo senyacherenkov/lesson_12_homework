@@ -34,22 +34,29 @@ public:
     ~MenuModel() {}
     void createDocument(std::string& docName);
     void importDocument(std::string& docName);
-    std::string exportDocument();
+    void exportDocument(std::string& docName);
 
+    Glyph* createGlyph(GlyphType glyph, std::string description);
     virtual std::string printState();
 private:
     MenuModelState m_state;
 };
 
-class DrawModel: public MenuModel {
+class DrawModel: public Model {
 public:
     DrawModel() = default;
     ~DrawModel() {}
-    void drawGliph(Gliph* gliphName);
-    void deleteGliph(Gliph* gliphName);
+    void drawGliph(Glyph* gliphName, int x, int y);
+    void deleteGliph(Glyph* gliphName);
 
     virtual std::string printState();
+
 private:
-    std::map<Gliph*, int> m_gliphStore;
+    struct InternalData {
+      int x, y, number;
+    };
+
+private:
+    std::map<Glyph*, InternalData> m_gliphStore;
     static int m_counter;
 };
